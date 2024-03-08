@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="579.0" prefWidth="574.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="media.Controller">
+   <children>
+      <Button fx:id="btnPause" layoutX="195.0" layoutY="407.0" mnemonicParsing="false" onAction="#stopFunc" prefHeight="22.0" prefWidth="69.0" text="정지" />
+      <Button fx:id="btnPlay" layoutX="14.0" layoutY="407.0" mnemonicParsing="false" onAction="#playFunc" prefHeight="22.0" prefWidth="69.0" text="재생" />
+      <Button fx:id="btnStop" layoutX="105.0" layoutY="407.0" mnemonicParsing="false" onAction="#pauseFunc" prefHeight="22.0" prefWidth="69.0" text="일시 정지" />
+      <ListView fx:id="listView" layoutX="278.0" layoutY="20.0" prefHeight="300.0" prefWidth="200.0" />
+      <MediaView fx:id="mediaView" fitHeight="300.0" fitWidth="250.0" layoutX="14.0" layoutY="14.0" />
+      <MediaView fitHeight="200.0" fitWidth="200.0" />
+      <Label layoutX="20.0" layoutY="326.0" text="시간" />
+      <ProgressBar fx:id="progressBar" layoutX="20.0" layoutY="346.0" prefWidth="200.0" progress="0.0" />
+      <ProgressIndicator fx:id="progressIndicator" layoutX="242.0" layoutY="345.0" progress="0.0" />
+      <Label fx:id="labelTime" layoutX="167.0" layoutY="364.0" text="0/0 sec">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Slider fx:id="sliderVolume" layoutX="308.0" layoutY="348.0" onMouseDragged="#sliderFunc" showTickMarks="true" />
+      <Label layoutX="308.0" layoutY="376.0" text="소리">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
